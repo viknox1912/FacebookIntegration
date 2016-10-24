@@ -2,9 +2,8 @@ package com.example.viknox.facebookintegration;
 
 import java.net.URL;
 
-/**
- * Created by x230 on 10/23/2016.
- */
+
+// POJO object to store user data
 public class User {
     public String getName() {
         return Name;

@@ -51,15 +51,6 @@ public class MainActivity extends AppCompatActivity {
                                 JSONObject data = PicURLObj.getJSONObject("data");
                                 String PicUrl = data.getString("url");
                                 Log.v("JSON", PicURLObj.toString() + data + PicUrl);
-
-
-                                // TODO Create POST HTTPS to server,
-
-
-
-
-
-
                                 Toast.makeText(getApplicationContext(), "Name " + Name, Toast.LENGTH_LONG).show();
 
 
@@ -70,7 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
 
                     });
-            
+            Bundle parameters = new Bundle();
+            parameters.putString("fields", "id,name,email,gender,birthday,picture");
+            request.setParameters(parameters);
+            request.executeAsync();
+            // TODO Create POST HTTPS to server
+            //TODO move to next screen
+
+
             Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
         }
 
